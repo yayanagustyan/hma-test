@@ -1,0 +1,52 @@
+.month_picker {
+	padding: 5px 5px 15px 5px;
+	box-shadow: 2px 4px 4px #CCCCCC;
+	background-color: #FFFFFF;
+	margin-top: 5px;
+	position: absolute;
+	right: 10px;
+	width: 220px;
+	border-radius: 5px;
+	z-index: 999999;
+}
+
+.month_picker_header {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+	align-items: center;
+}
+
+.month_picker_header span {
+	font-weight: bold;
+	font-size: 16px;
+}
+.month_picker_header i {
+	cursor: pointer;
+}
+
+.month_picker_body {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.month_item {
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.month_item:hover {
+	background-color: #5fbeaa;
+	border-radius: 5px;
+	color: #FFFFFF;
+}
+
+.cal-icon {
+	position: absolute;
+	right: 20px;
+	top: 5px;
+}

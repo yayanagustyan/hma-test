@@ -1,0 +1,74 @@
+.has-icon {
+	position: relative;
+}
+
+.has-icon input {
+	padding-right: 30px !important;
+}
+
+.has-icon.icon-left input {
+	padding-left: 30px !important;
+	padding-right: 20px !important;
+}
+
+.has-icon i {
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	cursor: pointer;
+}
+
+.has-icon.icon-left i {
+	position: absolute;
+	width: 30px;
+	left: 10px;
+	top: 5px;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.text-bold {
+	font-weight: bold !important;
+}
+
+.img-thumb {
+	width: 150px;
+	height: 100px;
+	border-radius: 10px;
+	object-fit: cover;
+	border: 1px solid lightgrey;
+}
+
+.img-thumb-small {
+	width: 100px;
+	height: 60px;
+	border-radius: 10px;
+	object-fit: cover;
+	border: 1px solid lightgrey;
+}
+
+.img-rounded {
+	height: 50px;
+	width: 50px;
+	border-radius: 100% !important;
+}
+
+#bg-image {
+	position: absolute; 
+	width: 100vw; 
+	height: 100vh;
+}
+
+#bg-image #overlay {
+	position: absolute; 
+	width: 100vw; 
+	height: 100vh;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.no-link,
+.no-link:hover,
+.no-link:visited {
+	text-decoration: none;
+	color: black;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		body {
+			padding: 25px;
+		}
+
+  	.container {padding: 0 10%;}
+  	.wrapper { border:1px solid #C0C0C0; border-radius: 5px;}
+  	.row {display: flex;margin-left: -10px;margin-right: -10px;}
+  	.col-sm-12 {width: 100%;}
+  	.col-sm-6 {width: 50%;}
+
+  	.card {border:1px solid #C0C0C0;border-radius: 5px;padding: 15px;}
+
+		.footer-bg {
+		  background-image: url('https://vdc.id/v3/assets/images/footer-dark.png');
+		  height: auto;
+		  width: 100% !important;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  background-position: center;
+		  padding-bottom: 30px;
+		}
+
+		.text-center {text-align: center !important;}
+		.text-right {text-align: right !important;}
+		.text-white {color: #FFFFFF !important;}
+
+		.px-5 {padding-left: 5px; padding-right: 5px }
+		.px-10 {padding-left: 10px; padding-right: 10px }
+		.p-10 {padding: 10px; }
+		.p-15 {padding: 15px;}
+		.mt-10 {margin-top: 10px;}
+		.mb-10 {margin-bottom: 10px;}
+		.mb-5 {margin-bottom: 5px;}
+
+		.text-16 { font-size: 16px !important; }
+		.text-14 { font-size: 14px !important; }
+		.text-12 { font-size: 12px !important; }
+
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="wrapper">
+			<div class="p-10">
+				<p>Hallo VDC,</p>
+				<p>Berikut adalah rincian pesanan dari web <a href="https://vdc.id/v3">vdc.id</a></p>
+
+				<div class="row px-5">
+					<div class="col-sm-12">
+						<table>
+							<tr>
+								<td>Nama</td>
+								<td>&nbsp;:&nbsp;</td>
+								<td>{ord_name}</td>
+							</tr>
+							<tr>
+								<td>Email</td>
+								<td>&nbsp;:&nbsp;</td>
+								<td>{ord_email}</td>
+							</tr>
+							<tr>
+								<td>No HP</td>
+								<td>&nbsp;:&nbsp;</td>
+								<td>{ord_phone}</td>
+							</tr>
+							<tr>
+								<td>Perusahaan</td>
+								<td>&nbsp;:&nbsp;</td>
+								<td>{ord_company}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+				<p>Produk yang dipesan:</p>
+				<h3><b>{produk}</b></h3>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<b style="font-size: 32px; padding: 5px;">TOTAL : Rp. {total} </b>
+				</div>
+			</div>
+
+			<div class="footer-bg text-center">
+				<div class="p-15">
+					<img src="https://vdc.id/v3/assets/images/logo-brand-white.png">
+					<div class="text-white mt-10">
+						<span style="font-size: 0.7rem">this email sent by Virtual Data Center Indonesia</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>
