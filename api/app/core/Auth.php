@@ -39,9 +39,21 @@ class Auth {
         return $response
           ->withHeader('Content-Type', 'application/json')
           ->withStatus(401);
+      }else{
+        // check auth
+        $hash = "Basic " . base64_encode("hmauser2024:testhma123!");
+        if ($auth != $hash) {
+          $response = $app->getResponseFactory()->createResponse();
+          $response->getBody()->write(json_encode($data));
+          
+          return $response
+            ->withHeader('Content-Type', 'application/json')
+            ->withStatus(401);
+        }else{
+          return $handler->handle($request);
+        }
       }
       // Proceed with the next middleware
-      return $handler->handle($request);
     };
     return $bmw;
   }

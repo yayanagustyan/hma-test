@@ -3,7 +3,7 @@
 function my_header(){
 	return array(
 		'Content-Type:application/json', 
-		'Authorization:Basic YW5kcm9pZDpTT1BzZW1hcmFuZy0yMDEy',
+		'Authorization:Basic aG1hdXNlcjIwMjQ6dGVzdGhtYTEyMyE=',
 	);
 }
 

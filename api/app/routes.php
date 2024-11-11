@@ -29,17 +29,17 @@ return function (App $app) {
       ->withStatus(200);
   });
 
-  $app->post('/web/login', array($acc, 'web_login'));
+  $app->post('/web/login', array($acc, 'web_login'))->add($auth);
 
-  $app->post('/base64_upload', array($comm, 'base64_upload'));
+  $app->post('/base64_upload', array($comm, 'base64_upload'))->add($auth);
 
   $app->get('/params', array($comm, 'params'))->add($auth);
-  $app->post('/params/id', array($comm, 'params_id'));
-  $app->post('/params/update', array($comm, 'params_update'));
+  $app->post('/params/id', array($comm, 'params_id'))->add($auth);
+  $app->post('/params/update', array($comm, 'params_update'))->add($auth);
 
-  $app->get('/menus', array($comm, 'menus'));
-  $app->get('/menus/{code}', array($comm, 'menus_id'));
-  $app->post('/menus/update', array($comm, 'menus_update'));
+  $app->get('/menus', array($comm, 'menus'))->add($auth);
+  $app->get('/menus/{code}', array($comm, 'menus_id'))->add($auth);
+  $app->post('/menus/update', array($comm, 'menus_update'))->add($auth);
 
   $app->group('/users', function (Group $group) {
     $user = new User;
@@ -48,7 +48,7 @@ return function (App $app) {
     $group->post('/save', array($user, 'save_user'));
     $group->post('/update', array($user, 'update_user'));
     $group->get('/delete/{code}', array($user, 'delete_user'));
-  });
+  })->add($auth);
 
 
 };
