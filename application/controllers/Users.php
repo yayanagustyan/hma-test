@@ -4,6 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Users extends CI_Controller {
 
 	public function index(){
+		if ($this->session->userdata('login_id') == null ) {
+			redirect(base_url('account/logout'));
+		}
+		
 		$data['title'] = "Login";
 		$script['js'] = array(base_url('assets/js/controllers/User.js'));
 

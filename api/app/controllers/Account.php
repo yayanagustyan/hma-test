@@ -25,6 +25,9 @@ class Account {
 				"message" => "Data tidak ditemukan",
 				"data"		=> array(),
 			);
+		}else{
+			// update user login
+			$this->base->db_update("tb_user", array("user_login"=>1), array("user_email"=> $data['username'] ) );
 		}
 
 		return $this->base->renderJSON($res, $json);

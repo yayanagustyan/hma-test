@@ -7,7 +7,7 @@ class Welcome extends CI_Controller {
 		$data['title'] = "Dashboard";
 
 		if ($this->session->userdata('login_id') == null ) {
-			redirect(base_url('account/login'));
+			redirect(base_url('account/logout'));
 		}
 
 		$params = curl_get('/params');

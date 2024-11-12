@@ -26,10 +26,15 @@ class Account extends CI_Controller {
 		$this->session->set_userdata($sess);
 
 		redirect(base_url());
-
 	}
 
 	public function logout(){
+		$payload = array(
+			"user_id"    => $this->session->userdata('login_id'),
+			"user_login" => 0,
+		);
+		$cek = curl_post($payload, "/users/update")->data;
+
 		$this->session->sess_destroy();
 		redirect(base_url('account/login'));
 	}

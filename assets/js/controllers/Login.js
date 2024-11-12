@@ -20,6 +20,7 @@ function doLogin() {
     }else{
       let data = {'username':user,'password':pass};
       ajaxPost(api_url('/web/login'), data).then(function(res){
+        console.log(res);
         if (res.code == 200) {
           let id = res.data[0].user_id;
           window.location.href = base_url('account/login_success/'+id);
